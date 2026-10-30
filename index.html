@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraLens — Discover Stunning Imagery</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sticky Branded Header -->
+    <header class="site-header">
+        <div class="header-content">
+            <div class="brand">
+                <span class="brand-icon">✨</span>
+                <h1>AuraLens</h1>
+            </div>
+            <p class="tagline">Curate your visual world, one search at a time.</p>
+        </div>
+    </header>
+
+    <!-- Main Search & Content Section -->
+    <main class="main-container">
+        
+        <!-- Search Controls -->
+        <section class="search-section">
+            <form id="search-form" class="search-form" onsubmit="return false;">
+                <div class="input-group">
+                    <label for="search-input" class="sr-only">Search for images</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        placeholder="Search high-res topics (e.g. minimalist architecture)..." 
+                        autocomplete="off"
+                    >
+                    <button type="button" id="clear-btn" class="clear-btn" title="Clear search">✕</button>
+                    <button type="submit" id="search-btn" class="search-btn">Search</button>
+                </div>
+            </form>
+
+            <!-- Quick-Pick Suggestion Chips -->
+            <div class="category-row">
+                <span class="category-label">Explore:</span>
+                <button type="button" class="chip">Architecture</button>
+                <button type="button" class="chip">Wilderness</button>
+                <button type="button" class="chip">Culinary</button>
+                <button type="button" class="chip">Abstract</button>
+            </div>
+        </section>
+
+        <!-- Status & Results Container -->
+        <section class="results-section">
+            <div class="results-meta">
+                <span id="result-count" class="result-count">Ready to explore</span>
+            </div>
+
+            <!-- Empty Results Container (Genuinely empty, responsive CSS Grid) -->
+            <div id="results" class="results-grid">
+                <!-- Empty State Message -->
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">📷</div>
+                    <h3>Your visual gallery is waiting</h3>
+                    <p>Type a topic above or click a suggestion chip to discover inspiring imagery.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 AuraLens. Crafted for visual creators.</p>
+    </footer>
+
+    <!-- Script loaded just before </body> -->
+    <script src="script.js"></script>
+</body>
+</html>
